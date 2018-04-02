@@ -1,0 +1,28 @@
+{
+  "name": "game-launcher",
+  "version": "1.0.0",
+  "description": "This is a application that launches html5 games",
+  "main": "main.js",
+  "scripts": {
+    "test": "npm test",
+    "start": "electron ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/capAcade/gameLauncher.git"
+  },
+  "keywords": [
+    "games",
+    "electron",
+    "html5"
+  ],
+  "author": "CapAcade",
+  "license": "UNLICENSED",
+  "bugs": {
+    "url": "https://github.com/capAcade/gameLauncher/issues"
+  },
+  "homepage": "https://github.com/capAcade/gameLauncher#readme",
+  "devDependencies": {
+    "electron": "^1.8.4"
+  }
+}
