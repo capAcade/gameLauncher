@@ -85,6 +85,9 @@ ax = ay = 15;
 xv = yv = 0;
 trail = [];
 tail = 5;
+fillStyle = 0;
+fillStyles = ["#DDA0DD", "#F5DEB3", "#87CEEB"];
+
 function game() {
     px += xv;
     py += yv;
@@ -103,7 +106,7 @@ function game() {
     ctx.fillStyle = "black";
     ctx.fillRect(0, 0, canv.width, canv.height);
 
-    ctx.fillStyle = "lime";
+    ctx.fillStyle = fillStyles[fillStyle];
     for (var i = 0; i < trail.length; i++) {
         ctx.fillRect(trail[i].x * gs, trail[i].y * gs, gs - 2, gs - 2);
         if (trail[i].x == px && trail[i].y == py) {
@@ -117,6 +120,7 @@ function game() {
 
     if (ax == px && ay == py) {
         tail++;
+        fillStyle = (fillStyle+1) % fillStyles.length
         ax = Math.floor(Math.random() * tc);
         ay = Math.floor(Math.random() * tc);
     }
