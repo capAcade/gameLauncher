@@ -26,20 +26,44 @@ window.addEventListener("gamepadconnected", function (e) {
                     //   thaButtonIs.innerHTML = button;
                     switch (button) {
                         case "14":
-                            console.log('left')
+                            //left
                             xv = -1; yv = 0;
                             break;
                         case "12":
-                            console.log('up')
+                            //up
                             xv = 0; yv = -1;
                             break;
                         case "15":
-                            console.log('right')
+                            //right
                             xv = 1; yv = 0;
                             break;
                         case "13":
-                            console.log('down')
+                            //down
                             xv = 0; yv = 1;
+                            break;
+                        case "2":
+                            //Y
+                            break;
+                        case "3":
+                            //X
+                            break;
+                        case "0":
+                            //B
+                            break;
+                        case "1":
+                            //A
+                            break;
+                        case "4":
+                            //L
+                            break;
+                        case "5":
+                            //R
+                            break;
+                        case "8":
+                            //Select
+                            break;
+                        case "9":
+                            //Select
                             break;
                     }
 
