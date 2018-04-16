@@ -1,3 +1,4 @@
+
 <html>
     <body style="margin: 0px; padding: 0px;">
 
@@ -13,7 +14,48 @@
                 canv.width = window.innerWidth;
                 ctx=canv.getContext("2d");
                 document.addEventListener("keydown",keyPush);
+                window.requestAnimationFrame(animation);
+
                 setInterval(game,1000/15);
+                var thaButtonIs = document.querySelector("#thaButtonIs");
+    var thaGamePadIs = document.querySelector("#thaGamePadIs");
+}
+window.addEventListener("gamepadconnected", function(e) {
+    window.setInterval(function(){
+    var gp = navigator.getGamepads()[0];
+			for(var button in gp.buttons){
+          if(gp.buttons[button].pressed){
+              //12 up   13 down 15 right 14 left
+              console.log('hello', button )
+            //   thaButtonIs.innerHTML = button;
+              switch(button) {
+                    case "14":
+                        console.log('left')
+                        xv=-1;yv=0;
+                        break;
+                    case "12":
+                        console.log('up')
+                        xv=0;yv=-1;
+                        break;
+                    case "15":
+                        console.log('right')
+                        xv=1;yv=0;
+                        break;
+                    case "13":
+                        console.log('down')
+                        xv=0;yv=1;
+                        break;
+                }
+              
+          }
+      }
+    },1);
+});
+
+
+            
+            function animation(e){
+                console.log('eee', e);
             }
             px=py=10;
             gs=tc=20;
@@ -60,20 +102,26 @@
                 ctx.fillRect(ax*gs,ay*gs,gs-2,gs-2);
             }
             function keyPush(evt) {
-                switch(evt.keyCode) {
-                    case 37:
-                        xv=-1;yv=0;
-                        break;
-                    case 38:
-                        xv=0;yv=-1;
-                        break;
-                    case 39:
-                        xv=1;yv=0;
-                        break;
-                    case 40:
-                        xv=0;yv=1;
-                        break;
-                }
+                console.log('hello', evt);
+                // switch(evt.keyCode) {
+                //     case 37:
+                //         console.log('1 left')
+                //         xv=-1;yv=0;
+                //         break;
+                //     case 38:
+                //         console.log('2 up')
+                //         xv=0;yv=-1;
+                //         break;
+                //     case 39:
+                //         console.log('3 right')
+                //         xv=1;yv=0;
+                //         break;
+                //     case 40:
+                //     console.log('4 dow')
+                    
+                //         xv=0;yv=1;
+                //         break;
+                // }
             }
             </script>
 
