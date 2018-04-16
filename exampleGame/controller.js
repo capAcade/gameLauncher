@@ -16,61 +16,65 @@ function setUpGame() {
     setInterval(game, 1000 / 15);
 }
 window.addEventListener("gamepadconnected", function (e) {
-    window.setInterval(
-        function () {
-            var gp = navigator.getGamepads()[0];
-            for (var button in gp.buttons) {
-                if (gp.buttons[button].pressed) {
-                    //12 up   13 down 15 right 14 left
-                    console.log('hello', button)
-                    //   thaButtonIs.innerHTML = button;
-                    switch (button) {
-                        case "14":
-                            //left
-                            xv = -1; yv = 0;
-                            break;
-                        case "12":
-                            //up
-                            xv = 0; yv = -1;
-                            break;
-                        case "15":
-                            //right
-                            xv = 1; yv = 0;
-                            break;
-                        case "13":
-                            //down
-                            xv = 0; yv = 1;
-                            break;
-                        case "2":
-                            //Y
-                            break;
-                        case "3":
-                            //X
-                            break;
-                        case "0":
-                            //B
-                            break;
-                        case "1":
-                            //A
-                            break;
-                        case "4":
-                            //L
-                            break;
-                        case "5":
-                            //R
-                            break;
-                        case "8":
-                            //Select
-                            break;
-                        case "9":
-                            //Select
-                            break;
-                    }
-
-                }
-            }
-        }, 1);
+    window.setInterval(getPressedButton, 1);
 });
+function getPressedButton() {
+    var gp = navigator.getGamepads()[0];
+    if (gp && gp.buttons) {
+        for (var button in gp.buttons) {
+            if (gp.buttons[button].pressed) {
+                //12 up   13 down 15 right 14 left
+                console.log('hello', button)
+                //   thaButtonIs.innerHTML = button;
+                switch (button) {
+                    case "14":
+                        //left
+                        xv = -1; yv = 0;
+                        break;
+                    case "12":
+                        //up
+                        xv = 0; yv = -1;
+                        break;
+                    case "15":
+                        //right
+                        xv = 1; yv = 0;
+                        break;
+                    case "13":
+                        //down
+                        xv = 0; yv = 1;
+                        break;
+                    case "2":
+                        //Y
+                        break;
+                    case "3":
+                        //X
+                        break;
+                    case "0":
+                        //B
+                        break;
+                    case "1":
+                        //A
+                        break;
+                    case "4":
+                        //L
+                        break;
+                    case "5":
+                        //R
+                        break;
+                    case "8":
+                        //Select
+                        break;
+                    case "9":
+                        //Select
+                        break;
+                }
+
+            }
+        }
+    }
+
+}
+
 
 function animation(e) {
     console.log('eee', e);
