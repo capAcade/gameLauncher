@@ -1,5 +1,4 @@
 let px, py, gs, tc, ax, ay, xv, yv, trail, tail;
-let canvH;
 let canv;
 let ctx;
 px = py = 10;
@@ -10,9 +9,6 @@ trail = [];
 tail = 5;
 
 this.setUpGame = () => {
-    canvH = document.getElementById("gc");
-    canvH.height = window.innerHeight;
-    canvH.width = window.innerWidth;
     canv = document.getElementById("gc");
     canv.height = window.innerHeight;
     canv.width = window.innerWidth;
@@ -49,9 +45,11 @@ this.getGame = function() {
     while (trail.length > tail) {
         trail.shift();
     }
+    tail++;
+    
 
     if (ax == px && ay == py) {
-        tail++;
+        tail = 1;
         ax = Math.floor(Math.random() * tc);
         ay = Math.floor(Math.random() * tc);
     }

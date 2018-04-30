@@ -12,6 +12,7 @@ this.getPressedButton = () => {
 }
 
 this.setAction = (button) => {
+    console.log('aaa', button);
     switch (button) {
         case "14":
             //left

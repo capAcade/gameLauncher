@@ -6,6 +6,5 @@ window.onload = function () {
 }
 
 window.addEventListener("gamepadconnected", function (e) {
-   console.log('hello')
-    window.setInterval(joystick.getPressedButton, 20000);
+    window.setInterval(joystick.getPressedButton, 1);
 });
