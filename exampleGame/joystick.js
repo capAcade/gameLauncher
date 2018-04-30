@@ -12,7 +12,6 @@ this.getPressedButton = () => {
 }
 
 this.setAction = (button) => {
-    console.log('aaa', button);
     switch (button) {
         case "14":
             //left
@@ -31,28 +30,13 @@ this.setAction = (button) => {
             game.setDown();
             break;
         case "2":
-            //Y
-            break;
         case "3":
-            //X
-            break;
         case "0":
-            //B
-            break;
         case "1":
-            //A
-            break;
         case "4":
-            //L
-            break;
         case "5":
-            //R
-            break;
         case "8":
-            //Select
-            break;
         case "9":
-            //Start
             break;
     }
 }
