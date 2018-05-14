@@ -2,21 +2,51 @@
 <html>
   <head>
     <meta charset="UTF-8">
-    <title>Hello World!</title>
+    <title>CapMan</title>
+    <link rel="stylesheet" type="text/css" href="./src/style/style.css">
   </head>
   <body>
-    <h1>Hello World!</h1>
-    <!-- All of the Node.js APIs are available in this renderer process. -->
-    We are using Node.js <script>document.write(process.versions.node)</script>,
-    Chromium <script>document.write(process.versions.chrome)</script>,
-    and Electron <script>document.write(process.versions.electron)</script>.
 
+      <header>
+        <h1>CapMan</h1>
+      </header>
 
-    <a href="exampleGame/index.html">Go to Example game</a>
+      <main>
+          <div class="game">
+              <a class="gameAnchor" id="1" href="exampleGame/index.html">
+                  <img src="gameAssets/snake/snake.png" alt="Snake logo" />
+              </a>
+          </div>
+          <div class="game" >
+              <a class="gameAnchor" id="2" href="#">
+                  <img src="gameAssets/mario/Maniac-Mario-Screenshot.jpg" alt="Mario logo" />
+              </a>
+          </div>
+          <div class="game" >
+              <a class="gameAnchor" id="3" href="#">
+                  <img src="gameAssets/mario/Maniac-Mario-Screenshot.jpg" alt="Mario logo" />
+              </a>
+          </div>
+          <div class="game" >
+              <a class="gameAnchor" id="4" href="#">
+                  <img src="gameAssets/mario/Maniac-Mario-Screenshot.jpg" alt="Mario logo" />
+              </a>
+          </div>
+          <div class="game" >
+              <a class="gameAnchor" id="5" href="#">
+                  <img src="gameAssets/mario/Maniac-Mario-Screenshot.jpg" alt="Mario logo" />
+              </a>
+          </div>
+          <div class="game" >
+              <a class="gameAnchor" id="6" href="#">
+                  <img src="gameAssets/mario/Maniac-Mario-Screenshot.jpg" alt="Mario logo" />
+              </a>
+          </div>
 
+      </main>
     <script>
       // You can also require other files to run in this process
-      require('./renderer.js')
+      require('./src/js/renderer.js')
     </script>
   </body>
 </html>

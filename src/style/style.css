@@ -1,0 +1,39 @@
+@font-face {
+    font-family: "Arcade Rounded";
+    src: url(font/ARCADE_R.ttf) format("truetype");
+}
+* {
+    font-family: "Arcade Rounded", sans-serif
+}
+body {
+    margin: 0;
+    padding:0;
+    background: radial-gradient(#7db9e8, #1e5799); 
+    height: 100%;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+header {
+    width: 100%;
+    text-align: center;
+}
+
+header h1 {
+    color: #fff;
+    font-size: 50px;
+}
+
+main {
+    padding: 30px;
+}
+main .game{
+    display: inline-block;
+    margin: 30px;
+}
+main .game img {
+    height: 250px;
+    border-radius:5%;
+}
+main .game .gameAnchor:focus img{
+    box-shadow: 0px 0px 100px #fff;
+}
