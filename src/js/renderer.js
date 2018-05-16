@@ -1,7 +1,9 @@
 // This file is required by the index.html file and will
 // be executed in the renderer process for that window.
 // All of the Node.js APIs are available in this process.
-console.log('i am triggerd');
+// const GP = require('./src/js/gamePad.js');
+
+// let playerOneGp = new GP(0);
 
 const cntrl = {
     left: 37,
@@ -11,31 +13,69 @@ const cntrl = {
     fire: 32
 }
 
-let focussed = 1;
+let focussedCol = 1;
+let focussedRow = 1;
 
-document.getElementById(`${focussed}`).focus();
+const setFocus = (direction) => {
+    if(direction) {
+        switch(direction) {
+            case 'LEFT':
+                focussedCol--;
+                if(focussedCol <= 0){
+                    focussedCol = 3;
+                }
+            break;
+            case 'RIGHT':
+                focussedCol++;
+                if(focussedCol >= 4){
+                    focussedCol = 1;
+                }
+            break;
+            case 'UP':
+                focussedRow--;
+                if(focussedRow <= 0){
+                    focussedRow = 2;
+                }
+            break;
+            case 'DOWN':
+                focussedRow++;
+                if(focussedRow >= 3){
+                    focussedRow = 1;
+                }
+            break;
+        }
+    }
+    document.getElementById(`${focussedRow}-${focussedCol}`).focus();
+}
 
 document.addEventListener("keydown",(evt) =>{
-    console.log(focussed)
     switch(evt.keyCode) {
         case cntrl.left:
-            focussed--;
-            document.getElementById(`${focussed}`).focus();
+            setFocus('LEFT');
             break;
         case cntrl.up:
-            focussed++;
-            document.getElementById(`${focussed}`).focus();
+            setFocus('UP');
             break;
         case cntrl.right:
-            focussed++;
-            document.getElementById(`${focussed}`).focus();
+            setFocus('RIGHT');
             break;
         case cntrl.down:
-            focussed--;
-            document.getElementById(`${focussed}`).focus();
+            setFocus('DOWN');
             break;
         case cntrl.fire:
 
             break; 
     }
 });
+
+const gameLoop =() => {
+
+
+    window.requestAnimationFrame(gameLoop);
+}
+
+window.requestAnimationFrame(gameLoop);
+window.onload =  () => { 
+    setFocus(); 
+}
+

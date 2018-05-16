@@ -1,4 +1,4 @@
-class Gamepad {
+module.exports = class Gamepad {
     constructor (gpIndex){
         this.gpIndex = gpIndex;
         this.gamePadConnected = false;
