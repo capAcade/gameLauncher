@@ -32,6 +32,7 @@ main .game{
 }
 main .game img {
     height: 250px;
+    width: 312px;
     border-radius:5%;
 }
 main .game .gameAnchor:focus img{
