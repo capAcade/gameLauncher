@@ -2,30 +2,6 @@
 // be executed in the renderer process for that window.
 // All of the Node.js APIs are available in this process.
 
-class Gamepad {
-    constructor (gpIndex){
-        this.gpIndex = gpIndex;
-        this.gamePadConnected = false;
-        window.addEventListener("gamepadconnected", (e)=> {
-            this.gamePadConnected = true;
-        });
-    }
-    isBtnPushed(buttonIndex){
-        this.gp = navigator.getGamepads()[this.gpIndex];
-        if(this.gp === null || !this.gamePadConnected){
-            return;
-        }
-        if(this.gp.buttons.length === 0 || this.gp.buttons[buttonIndex] === undefined){
-            return;
-        }
-        return this.gp.buttons[buttonIndex].pressed;
-    }
-}
-
-
-
-
-let playerOneGp = new Gamepad(0);
 
 const cntrl = {
     left: 37,
@@ -89,26 +65,3 @@ document.addEventListener("keydown",(evt) =>{
             break; 
     }
 });
-
-const gameLoop =() => {
-
-    if(playerOneGp.isBtnPushed(12)){
-        setFocus('UP');
-    }
-    if(playerOneGp.isBtnPushed(14)){
-        setFocus('LEFT');
-    }
-    if(playerOneGp.isBtnPushed(13)){
-        setFocus('DOWN');
-    }
-    if(playerOneGp.isBtnPushed(12)){
-        setFocus('RIGHT');
-    }
-    window.requestAnimationFrame(gameLoop);
-}
-
-window.requestAnimationFrame(gameLoop);
-window.onload =  () => { 
-    setFocus(); 
-}
-
