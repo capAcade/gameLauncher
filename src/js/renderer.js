@@ -32,7 +32,7 @@ const cntrl = {
     right: 39,
     up: 38,
     down: 40,
-    fire: 32
+    fire: 17
 }
 
 let focussedCol = 1;
@@ -85,7 +85,7 @@ document.addEventListener("keydown",(evt) =>{
             setFocus('DOWN');
             break;
         case cntrl.fire:
-
+        document.getElementById(`${focussedRow}-${focussedCol}`).click();
             break; 
     }
 });
