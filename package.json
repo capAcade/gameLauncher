@@ -19,13 +19,15 @@
   },
   "homepage": "https://github.com/capAcade/gameLauncher#readme",
   "dependencies": {
+    "capmancrashingbugs": "git+https://git@github.com/capAcade/capManCrashingBugs.git",
     "capmangalaxy": "git+https://git@github.com/capAcade/capManGalaxy.git",
     "copy-dir": "^0.4.0",
     "fastify": "^1.11.0",
     "fastify-autoload": "^0.5.0",
     "fastify-cli": "^0.23.0",
     "fastify-plugin": "^1.2.0",
-    "fastify-static": "^0.14.0"
+    "fastify-static": "^0.14.0",
+    "phaser-racer": "git+https://git@github.com/capAcade/phaser-racer.git"
   },
   "devDependencies": {
     "tap": "^12.0.0"
