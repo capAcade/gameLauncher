@@ -19,6 +19,7 @@
   },
   "homepage": "https://github.com/capAcade/gameLauncher#readme",
   "dependencies": {
+    "break-down": "git+https://git@github.com/capAcade/breakout-game.git",
     "capmancrashingbugs": "git+https://git@github.com/capAcade/capManCrashingBugs.git",
     "capmangalaxy": "git+https://git@github.com/capAcade/capManGalaxy.git",
     "copy-dir": "^0.4.0",
