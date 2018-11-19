@@ -8,8 +8,7 @@ var copydir = require('copy-dir');
 //copydir.sync('./node_modules/break-down', './public/games/break-down');
 copydir.sync('./node_modules/capmangalaxy/docs', './public/games/capmangalaxy');
 copydir.sync('./node_modules/capmancrashingbugs/docs', './public/games/capmancrashingbugs');
-copydir.sync('./node_modules/phaser-racer/dist', './public/games/phaser-racer');
-
+copydir.sync('./node_modules/phaser-league/src', './public/games/phaser-league');
 
 module.exports = function (fastify, opts, next) {
   // Place here your custom code!
