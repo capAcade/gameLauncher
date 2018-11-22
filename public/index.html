@@ -2,10 +2,74 @@
 <html>
   <head>
     <meta charset="UTF-8">
-    <title>CapMan</title>
+    <title>CapMan</title>    
+    <link rel="stylesheet" href="vendor/coverflow.css">
     <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="vendor/jquery.js"></script>
+    <script src="vendor/coverflow.js"></script>
   </head>
   <body>
+    <div>
+        <div id="coverflow">
+            <img height="350px" width="350px" src="gameAssets/ding.png" />
+            <img height="350px" width="350px" src="gameAssets/ding.png" />
+            <img height="350px" width="350px" src="gameAssets/ding.png" />
+            <img height="350px" width="350px" src="gameAssets/ding.png" />
+            <img height="350px" width="350px" src="gameAssets/ding.png" />
+        </div>
+    </div>
+    <div id="coverflow-slider"></div>
+   <script>
+       $(function() {
+            $('#coverflow').coverflow({
+                active: 2,
+                scale: 0.8,
+                overlap:0.1,
+                select: function(event, ui){
+                    console.log('here');
+                }
+            });
+            $('#coverflow img').click(function() {
+                if( ! $(this).hasClass('ui-state-active')){
+                    return;
+                } 
+                $('#coverflow').coverflow('next');
+            });
+            });
+
+            const cntrl = {
+                left: 37,
+                right: 39,
+                up: 38,
+                down: 40,
+                fire: 17
+            }
+
+            document.addEventListener("keydown",(evt) =>{
+                switch(evt.keyCode) {
+                    case cntrl.left:
+                        $('#coverflow').coverflow('prev');
+                        break;
+                    case cntrl.up:
+                        
+                        break;
+                    case cntrl.right:
+                        $('#coverflow').coverflow('next');
+                        break;
+                    case cntrl.down:
+                       
+                        break;
+                    case cntrl.fire:
+                    
+                        break; 
+                }
+            });
+
+
+   </script> 
+
+<!-- 
+
 
       <header>
         <h1>CapMan</h1>
@@ -113,6 +177,9 @@ document.addEventListener("keydown",(evt) =>{
             break; 
     }
 });
-    </script>
+    </script> -->
+
+
+    
   </body>
 </html>
