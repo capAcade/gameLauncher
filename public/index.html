@@ -11,11 +11,11 @@
   <body>
     <div>
         <div id="coverflow">
-            <img height="350px" width="350px" src="gameAssets/ding.png" />
-            <img height="350px" width="350px" src="gameAssets/ding.png" />
-            <img height="350px" width="350px" src="gameAssets/ding.png" />
-            <img height="350px" width="350px" src="gameAssets/ding.png" />
-            <img height="350px" width="350px" src="gameAssets/ding.png" />
+            <img data-path="games/capmangalaxy/index.html" height="350px" width="350px" src="gameAssets/galaxy.png" />
+            <img data-path="games/phaser-league/index.html" height="350px" width="350px" src="gameAssets/leage.png" />
+            <img data-path="games/capmancrashingbugs/index.html" height="350px" width="350px" src="gameAssets/Cover-Capman.png" />
+            <img data-path="games/capmangalaxy/index.html" height="350px" width="350px" src="gameAssets/Cover-Capman.png" />
+            <img data-path="games/capmangalaxy/index.html" height="350px" width="350px" src="gameAssets/Cover-Capman.png" />
         </div>
     </div>
     <div id="coverflow-slider"></div>
@@ -60,7 +60,7 @@
                        
                         break;
                     case cntrl.fire:
-                    
+                        window.location.href = $('.ui-state-active').attr('data-path');
                         break; 
                 }
             });
