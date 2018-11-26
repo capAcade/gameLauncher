@@ -22,6 +22,7 @@
     "break-down": "git+https://git@github.com/capAcade/breakout-game.git",
     "capmancrashingbugs": "git+https://git@github.com/capAcade/capManCrashingBugs.git",
     "capmangalaxy": "git+https://git@github.com/capAcade/capManGalaxy.git",
+    "flipper": "git+https://git@github.com/hansblum/flipper.git",
     "copy-dir": "^0.4.0",
     "fastify": "^1.11.0",
     "fastify-autoload": "^0.5.0",
