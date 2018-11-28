@@ -1,0 +1,16 @@
+body {
+    background: url("bg.svg");
+    background-repeat: no-repeat;
+    background-size: 1280px 1024px;
+    margin: 0px;
+}
+canvas {
+    margin: 0 auto;
+}
+.ui-coverflow-wrapper{
+    height:400px;
+    margin-top: 350px;
+}
+.ui-state-active{
+    border:0px;
+}
