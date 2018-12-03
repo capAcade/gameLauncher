@@ -19,6 +19,10 @@ var games = [
   {
     from: './node_modules/break-down',
     to: './public/games/break-down'
+  },
+  {
+    from: './node_modules/capball',
+    to: './public/games/capball'
   }
 ];
 
