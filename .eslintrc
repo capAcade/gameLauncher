@@ -1,0 +1,21 @@
+{
+  "rules": {
+    "linebreak-style": 0,
+    "indent": ["error", 4],
+    "multiline-comment-style": ["error", "starred-block"],
+    "global-require": ["off"],
+    "no-console": "off",
+    "no-underscore-dangle": 0,
+    "no-inline-comments": ["error"],
+    "max-len": ["error", { "code": 160 }],
+    "import/no-extraneous-dependencies": ["error", {"devDependencies": true}],
+    "func-names": ["error", "never"]
+  },
+  "env": {
+    "node": true,
+    "es6": true,
+    "jasmine": true
+  },
+  "plugins": ["eslint-plugin-require", "eslint-plugin-one-variable-per-var"],
+  "extends": "airbnb-base"
+}
