@@ -28,7 +28,7 @@ const games = [
 ];
 
 const createDir = () => new Promise((resolve, reject) => {
-    console.log('creating new tmp directory');
+    console.log('Creating new tmp directory');
     if (!fs.existsSync('tmp')) {
         resolve(fs.mkdirSync('tmp', { mode: 0o777 }));
     } else {
@@ -70,6 +70,7 @@ const getUpdatesZip = () => new Promise((resolve, reject) => {
 });
 
 const unzip = () => new Promise((resolve, reject) => {
+    console.log('Unzipping update');
     extract('./tmp/update.zip', { dir: `${__dirname}/tmp/` }, (err) => {
         if (err) {
             console.log('error: ', err);
@@ -81,7 +82,7 @@ const unzip = () => new Promise((resolve, reject) => {
 });
 
 const cpProd = () => new Promise((resolve, reject) => {
-    console.log('copying public directory');
+    console.log('Copying update into public directory');
     copyDir('./tmp/public', './public', (err) => {
         if (err) {
             console.log('error: ', err);
@@ -94,6 +95,7 @@ const cpProd = () => new Promise((resolve, reject) => {
 });
 
 const cpDev = () => new Promise((resolve) => {
+    console.log('Copying games into public directory');
     const promiseMap = games.map((game) => {
         const promise = new Promise((res, rej) => {
             copyDir(game.from, game.to, (err) => {
