@@ -4,6 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "fix": "eslint . --ext .js --ignore-path .eslintignore --fix",
+    "lint": "eslint . --ext .js --ignore-path .eslintignore --max-warnings 0",
     "test": "tap test/*.test.js test/*/*.test.js test/*/*/*.test.js",
     "start": "cross-env NODE_ENV=prod node install.js && fastify start -l info app.js",
     "dev": "node install.js && fastify start -l info -P app.js"
@@ -24,11 +26,6 @@
     "capmancrashingbugs": "git+https://git@github.com/capAcade/capManCrashingBugs.git",
     "capmangalaxy": "git+https://git@github.com/capAcade/capManGalaxy.git",
     "copy-dir": "^0.4.0",
-    "eslint": "^5.6.0",
-    "eslint-config-airbnb-base": "^13.1.0",
-    "eslint-plugin-import": "^2.14.0",
-    "eslint-plugin-one-variable-per-var": "0.0.3",
-    "eslint-plugin-require": "0.0.1",
     "extract-zip": "^1.6.7",
     "fastify": "^1.11.0",
     "fastify-autoload": "^0.5.0",
@@ -43,6 +40,11 @@
   },
   "devDependencies": {
     "cross-env": "^5.2.0",
+    "eslint": "^5.6.0",
+    "eslint-config-airbnb-base": "^13.1.0",
+    "eslint-plugin-import": "^2.14.0",
+    "eslint-plugin-one-variable-per-var": "0.0.3",
+    "eslint-plugin-require": "0.0.1",
     "tap": "^12.0.0"
   }
 }
