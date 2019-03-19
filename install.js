@@ -4,39 +4,20 @@ const fs = require('fs');
 const rf = require('rimraf');
 const rp = require('request-promise-native');
 
-const games = [
-    {
-        from: './node_modules/capmangalaxy/docs',
-        to: './public/games/capmangalaxy',
-    },
-    {
-        from: './node_modules/capmancrashingbugs/docs',
-        to: './public/games/capmancrashingbugs',
-    },
-    {
-        from: './node_modules/phaser-league/src',
-        to: './public/games/phaser-league',
-    },
-    {
-        from: './node_modules/break-down',
-        to: './public/games/break-down',
-    },
-    {
-        from: './node_modules/capball',
-        to: './public/games/capball',
-    },
-];
+const { games, zipURL } = require('./config');
 
 const createDir = () => new Promise((resolve, reject) => {
-    console.log('Creating new tmp directory');
     if (!fs.existsSync('tmp')) {
+        console.log('Creating new tmp dir');
         resolve(fs.mkdirSync('tmp', { mode: 0o777 }));
     } else {
+        console.log('Removing old tmp');
         rf('tmp', (err) => {
             if (err) {
                 console.log('error: ', err);
                 reject(err);
             } else {
+                console.log('Creating new tmp dir');
                 resolve(fs.mkdirSync('tmp', { mode: 0o777 }));
             }
         });
@@ -45,18 +26,18 @@ const createDir = () => new Promise((resolve, reject) => {
 
 const getUpdatesZip = () => new Promise((resolve, reject) => {
     const options = {
-        uri: 'https://s3-eu-west-1.amazonaws.com/cap-acade-public/artifacts/build.zip',
+        uri: zipURL,
         method: 'GET',
         encoding: 'binary',
         headers: {
             'Content-type': 'application/zip',
         },
     };
+    console.log('Downloading Update ...');
     rp(options)
         .then((body) => {
             const writeStream = fs.createWriteStream('tmp/update.zip');
             writeStream.write(body, 'binary');
-            console.log('Downloading Update ...');
             writeStream.on('finish', () => {
                 console.log('Update Download Completed');
                 resolve();
@@ -70,58 +51,54 @@ const getUpdatesZip = () => new Promise((resolve, reject) => {
 });
 
 const unzip = () => new Promise((resolve, reject) => {
-    console.log('Unzipping update');
+    console.log('Unzipping ...');
     extract('./tmp/update.zip', { dir: `${__dirname}/tmp/` }, (err) => {
         if (err) {
             console.log('error: ', err);
             reject(err);
         } else {
+            console.log('Unzipping Completed');
             resolve();
         }
     });
 });
 
-const cpProd = () => new Promise((resolve, reject) => {
-    console.log('Copying update into public directory');
-    copyDir('./tmp/public', './public', (err) => {
+const cp = (source, target) => new Promise((resolve, reject) => {
+    console.log(`Copying from ${source} to ${target} ...`);
+    copyDir(source, target, (err) => {
         if (err) {
             console.log('error: ', err);
             reject(err);
         } else {
-            console.log('Finished copy public directory');
+            console.log('Finished Copying');
             resolve();
         }
     });
 });
 
-const cpDev = () => new Promise((resolve) => {
-    console.log('Copying games into public directory');
-    const promiseMap = games.map((game) => {
-        const promise = new Promise((res, rej) => {
-            copyDir(game.from, game.to, (err) => {
-                if (err) {
-                    rej(err);
-                } else {
-                    res();
-                }
-            });
+const cpDev = () => new Promise((resolve, reject) => {
+    console.log('Copying games into public directory ...');
+    const promiseMap = games.map(game => cp(game.from, game.to));
+    Promise.all(promiseMap)
+        .then(() => {
+            console.log('Finished copying games', promiseMap);
+            resolve();
+        })
+        .catch((err) => {
+            console.log('Error: ', err);
+            reject(err);
         });
-        return promise;
-    });
-    Promise.all(promiseMap).then(() => {
-        resolve();
-    });
 });
 
-const handler = async () => {
+(async () => {
+    console.log('Start install');
     if (process.env.NODE_ENV === 'prod') {
         await createDir();
         await getUpdatesZip();
         await unzip();
-        await cpProd();
+        await cp('./tmp/public', './public');
     } else {
         await cpDev();
     }
-};
-
-handler();
+    console.log('Finished install');
+})();
