@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "tap test/*.test.js test/*/*.test.js test/*/*/*.test.js",
-    "start": "cross-env NODE_ENV=prod node install.js && fastify start -l info -P app.js",
+    "start": "cross-env NODE_ENV=prod node install.js && fastify start -l info app.js",
     "dev": "node install.js && fastify start -l info -P app.js"
   },
   "repository": {
