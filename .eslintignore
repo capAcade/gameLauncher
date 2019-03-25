@@ -1,0 +1,10 @@
+# folders
+/public/**
+/node_modules/**
+/test/**
+
+# exclude functional-test files
+*.ispec.js
+
+# exclude json files
+*.json
