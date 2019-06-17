@@ -1,8 +1,11 @@
 body {
-    background: url("bg.svg");
+
+    
+    background-image: url("bg.svg"), linear-gradient(to right,  #0070AD 57%,#12ABDB 57%);;
     background-repeat: no-repeat;
-    background-size: 1280px 1024px;
+    background-position: center; 
     margin: 0px;
+
 }
 canvas {
     margin: 0 auto;
