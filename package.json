@@ -5,7 +5,10 @@
   "main": "index.js",
   "scripts": {
     "test": "tap test/*.test.js test/*/*.test.js test/*/*/*.test.js",
-    "start": "fastify start -l info app.js",
+    "start": "run-script-os",
+    "start:windows": "start http://localhost:3000/index.html && fastify start -l info app.js",
+    "start:macos": "open http://localhost:3000/index.html && fastify start -l info app.js",
+    "start:default": "fastify start -l info app.js",
     "dev": "fastify start -l info -P app.js"
   },
   "repository": {
@@ -30,7 +33,8 @@
     "fastify-plugin": "^1.2.0",
     "fastify-static": "^0.14.0",
     "flickity": "^2.1.2",
-    "phaser-league": "git+https://git@github.com/capAcade/phaser-league.git"
+    "phaser-league": "git+https://git@github.com/capAcade/phaser-league.git",
+    "run-script-os": "^1.0.7"
   },
   "devDependencies": {
     "tap": "^12.0.0"
