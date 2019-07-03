@@ -5,7 +5,6 @@
   "main": "index.js",
   "scripts": {
     "test": "tap test/*.test.js test/*/*.test.js test/*/*/*.test.js",
-    "prestart": "node prestart",
     "start": "fastify start -l info app.js",
     "dev": "fastify start -l info -P app.js"
   },
