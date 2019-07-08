@@ -1,0 +1,9 @@
+{
+    "ext": "html,css,svg,png,js",
+    "watch": [
+        "src"
+    ],
+    "events": {
+      "restart": "node build"
+    }
+}

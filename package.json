@@ -5,11 +5,14 @@
   "main": "index.js",
   "scripts": {
     "test": "tap test/*.test.js test/*/*.test.js test/*/*/*.test.js",
+    "prestart": "node preStart",
     "start": "run-script-os",
-    "start:windows": "start http://localhost:3000/index.html && fastify start -l info app.js",
-    "start:macos": "open http://localhost:3000/index.html && fastify start -l info app.js",
-    "start:default": "fastify start -l info app.js",
-    "dev": "fastify start -l info -P app.js"
+    "build": "node build",
+    "start:windows": "start http://localhost:3000 && npm run build && node dist/app",
+    "start:macos": "open http://localhost:3000 && npm run build && node dist/app",
+    "start:default": "npm run build && node dist/app",
+    "prestart-dev":"npm run build",
+    "start-dev": "nodemon dist/app.js"
   },
   "repository": {
     "type": "git",
@@ -27,16 +30,12 @@
     "capmancrashingbugs": "git+https://git@github.com/capAcade/capManCrashingBugs.git",
     "capmangalaxy": "git+https://git@github.com/capAcade/capManGalaxy.git",
     "copy-dir": "^0.4.0",
-    "fastify": "^1.11.0",
-    "fastify-autoload": "^0.5.0",
-    "fastify-cli": "^0.23.0",
-    "fastify-plugin": "^1.2.0",
-    "fastify-static": "^0.14.0",
-    "flickity": "^2.1.2",
+    "express": "^4.17.1",
     "phaser-league": "git+https://git@github.com/capAcade/phaser-league.git",
     "run-script-os": "^1.0.7"
   },
   "devDependencies": {
+    "nodemon": "^1.19.1",
     "tap": "^12.0.0"
   }
 }
