@@ -1,0 +1,51 @@
+html {
+    background-image: url('../src/img/background.svg');
+    background-repeat: no-repeat;
+    background-position-x: center;
+    padding-top: 172px;
+}
+body {
+    max-width: 996px;
+    margin: 23px auto 23px auto;
+    color: white;
+    padding: 12px;
+}
+
+h1 {
+    font-size: 4em;
+}
+
+.right {
+	float: right;
+}
+
+a {
+    display: block;
+    text-decoration: none;
+    color: white;
+    margin: 10px 0;
+    padding: 20px;
+}
+
+a:active, a:hover, a:focus {
+    outline-style: none;
+    border-color: transparent;
+    box-shadow: none; 
+    background-color: rgba(32,32,32,0.333);
+}
+
+li {
+    list-style: none
+}
+
+h3 {
+    display: inline-block;
+    font-size: 24px;
+}
+
+a img.button {
+    float: left;
+    max-width: 64px;
+    max-height: 64px;
+    margin: 12px;
+}

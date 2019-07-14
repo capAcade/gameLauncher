@@ -1,0 +1,19 @@
+body {
+
+    
+    background-image: url("bg.svg"), linear-gradient(to right,  #0070AD 57%,#12ABDB 57%);;
+    background-repeat: no-repeat;
+    background-position: center; 
+    margin: 0px;
+
+}
+canvas {
+    margin: 0 auto;
+}
+.ui-coverflow-wrapper{
+    height:400px;
+    margin-top: 350px;
+}
+.ui-state-active{
+    border:0px;
+}
