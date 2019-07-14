@@ -7,10 +7,11 @@
     "prestart": "node preStart",
     "start": "run-script-os",
     "build": "node build",
+    "buildToExe": "npm run build && node compileToExe",
     "start:windows": "start http://localhost:3000 && npm run build && node dist/app",
     "start:macos": "open http://localhost:3000 && npm run build && node dist/app",
     "start:default": "npm run build && node dist/app",
-    "prestart-dev":"npm run build",
+    "prestart-dev": "npm run build",
     "start-dev": "nodemon dist/app.js"
   },
   "repository": {
@@ -34,6 +35,7 @@
     "run-script-os": "^1.0.7"
   },
   "devDependencies": {
+    "nexe": "^3.3.2",
     "nodemon": "^1.19.1"
   }
 }
