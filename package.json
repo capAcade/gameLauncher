@@ -4,7 +4,6 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "tap test/*.test.js test/*/*.test.js test/*/*/*.test.js",
     "prestart": "node preStart",
     "start": "run-script-os",
     "build": "node build",
@@ -35,7 +34,6 @@
     "run-script-os": "^1.0.7"
   },
   "devDependencies": {
-    "nodemon": "^1.19.1",
-    "tap": "^12.0.0"
+    "nodemon": "^1.19.1"
   }
 }
