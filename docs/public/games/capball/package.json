@@ -1,0 +1,59 @@
+{
+  "_args": [
+    [
+      "git+https://git@github.com/capAcade/capBall.git",
+      "C:\\workspace\\codingnights\\gameLauncher"
+    ]
+  ],
+  "_from": "git+https://git@github.com/capAcade/capBall.git",
+  "_id": "capball@git+https://git@github.com/capAcade/capBall.git#173bbb7744686253a3a3e72dd5ded5555028dd42",
+  "_inBundle": false,
+  "_integrity": "",
+  "_location": "/capball",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "git",
+    "raw": "git+https://git@github.com/capAcade/capBall.git",
+    "rawSpec": "git+https://git@github.com/capAcade/capBall.git",
+    "saveSpec": "git+https://git@github.com/capAcade/capBall.git",
+    "fetchSpec": "https://git@github.com/capAcade/capBall.git",
+    "gitCommittish": null
+  },
+  "_requiredBy": [
+    "/"
+  ],
+  "_resolved": "git+https://git@github.com/capAcade/capBall.git#173bbb7744686253a3a3e72dd5ded5555028dd42",
+  "_spec": "git+https://git@github.com/capAcade/capBall.git",
+  "_where": "C:\\workspace\\codingnights\\gameLauncher",
+  "author": {
+    "name": "Hans Blum",
+    "email": "jhlblum@gmail.com"
+  },
+  "bugs": {
+    "url": "https://github.com/capAcade/capBall/issues"
+  },
+  "dependencies": {
+    "jquery": "^3.3.1",
+    "matter-attractors": "^0.1.6",
+    "matter-js": "^0.14.2",
+    "poly-decomp": "^0.3.0"
+  },
+  "description": "You need to install browsersync",
+  "devDependencies": {
+    "eslint": "^5.9.0",
+    "eslint-config-google": "^0.11.0"
+  },
+  "homepage": "https://github.com/capAcade/capBall#readme",
+  "license": "MIT",
+  "main": "index.js",
+  "name": "capball",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/capAcade/capBall.git"
+  },
+  "scripts": {
+    "start": "browser-sync start --server",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "version": "1.0.0"
+}

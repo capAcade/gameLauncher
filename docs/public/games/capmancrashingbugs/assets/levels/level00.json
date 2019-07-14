@@ -1,0 +1,75 @@
+{
+    "bg": "bg-hint",
+    "music": "sequence",
+    "platforms": [
+        {"image": "ground", "x": 0, "y": 939, "decor": 3},
+        {"image": "ground", "x": 966, "y": 939, "decor": 4},
+        {"image": "ground", "x": 1932, "y": 939, "decor": 2},
+        {"image": "ground", "x": 2898, "y": 939, "decor": 3},
+        {"image": "ground", "x": 3864, "y": 939, "decor": 5},
+
+        {"image": "grass2x1", "x": 1500, "y": 925},
+        {"image": "grass2x1", "x": 1500, "y": 900},
+        {"image": "grass2x1", "x": 1500, "y": 869},
+        {"image": "grass2x1", "x": 1500, "y": 840},
+
+
+        {"image": "grass2x1", "x": 1800, "y": 925},
+        {"image": "grass2x1", "x": 1800, "y": 900},
+        {"image": "grass2x1", "x": 1800, "y": 869},
+        {"image": "grass2x1", "x": 1800, "y": 840},
+
+
+
+        {"image": "grass2x1", "x": 2420, "y": 925},
+        {"image": "grass2x1", "x": 2420, "y": 900},
+        {"image": "grass2x1", "x": 2420, "y": 869},
+        {"image": "grass2x1", "x": 2420, "y": 840},
+
+
+        {"image": "grass2x1", "x": 3500, "y": 760},
+        {"image": "grass4x1", "x": 3100, "y": 660},
+        {"image": "grass8x1", "x": 2600, "y": 540, "enemyWall": true, "decor": 2},
+        {"image": "grass1x1", "x": 2400, "y": 440},
+
+
+        {"image": "grass8x1", "x": 800, "y": 760, "enemyWall": true, "decor": 1}
+    ],
+    "coins": [
+        {"image": "coin", "x": 1020, "y": 550},
+        {"image": "coin", "x": 900, "y": 550},
+        {"image": "coin", "x": 960, "y": 500},
+        {"image": "coin", "x": 1650, "y": 850},
+        {"image": "coin", "x": 1700, "y": 850},
+        {"image": "coin", "x": 1750, "y": 850},
+
+        {"image": "coin", "x": 3400, "y": 510},
+        {"image": "coin", "x": 3100, "y": 400},
+
+
+
+        {"image": "coin", "x": 2700, "y": 280},
+        {"image": "coin", "x": 2820, "y": 280},
+        {"image": "coin", "x": 2760, "y": 230},
+
+        
+        {"image": "coin", "x": 2350, "y": 500},
+        {"image": "coin", "x": 2350, "y": 535},
+        {"image": "coin", "x": 2350, "y": 565}
+    ],
+    "traps": [
+
+    ],
+    "key":{"x": 2420, "y":300},
+    "doors": [
+        {"image": "door-var", "x": 3864, "y": 940}
+    ],
+    "bugs": [
+        {"image": "capManBug1", "x": 950, "y": 720},
+        {"image": "capManBug1", "x": 1600, "y": 850},
+        {"image": "capManBug1", "x": 2000, "y": 720},
+        {"image": "capManBug1", "x": 2300, "y": 850},
+        {"image": "capManBug1", "x": 2610, "y": 400}
+    ],
+    "hero": {"x": 51, "y": 772}
+}

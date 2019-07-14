@@ -1,0 +1,68 @@
+{
+    "bg": "bg-gray",
+    "music": "rivalry",
+    "platforms": [
+        {"image": "ground", "x": 0, "y": 939, "decor": 3},
+        {"image": "ground", "x": 1366, "y": 939, "decor": 4, "enemyWall": true},
+        {"image": "ground", "x": 3298, "y": 939, "decor": 3, "enemyWall": true},
+        {"image": "ground", "x": 4264, "y": 939, "decor": 5, "enemyWall": true},
+
+
+
+        {"image": "grass2x1", "x": 2420, "y": 925},
+        {"image": "grass8x1", "x": 2600, "y": 840, "enemyWall": true, "decor": 2},
+        {"image": "grass8x1", "x": 2900, "y": 200, "enemyWall": true, "decor": 2},
+        {"image": "grass4x1", "x": 1800, "y": 760},
+
+
+        {"image": "grass2x1", "x": 3200, "y": 480},
+        {"image": "grass4x1", "x": 3000, "y": 660},
+    
+
+        {"image": "grass4x1", "x": 2600, "y": 480},
+        
+        {"image": "grass1x1", "x": 3400, "y": 340},
+    
+
+        {"image": "grass8x1", "x": 800, "y": 760, "enemyWall": true, "decor": 1}
+    ],
+    "coins": [
+        {"image": "coin", "x": 1040, "y": 550},
+        {"image": "coin", "x": 920, "y": 550},
+        {"image": "coin", "x": 980, "y": 500},
+
+        {"image": "coin", "x": 1840, "y": 650},
+        {"image": "coin", "x": 1890, "y": 650},
+        {"image": "coin", "x": 1940, "y": 650},
+
+        {"image": "coin", "x": 3400, "y": 510},
+        {"image": "coin", "x": 3100, "y": 400},
+
+
+
+        {"image": "coin", "x": 2700, "y": 280},
+        {"image": "coin", "x": 2820, "y": 280},
+        {"image": "coin", "x": 2760, "y": 230},
+
+        
+        {"image": "coin", "x": 2350, "y": 500},
+        {"image": "coin", "x": 2350, "y": 535},
+        {"image": "coin", "x": 2350, "y": 565}
+    ],
+    "traps": [
+
+    ],
+    "key":{"x": 2500, "y":500},
+    "doors": [
+        {"image": "door-var", "x": 3864, "y": 940}
+    ],
+    "bugs": [
+        {"image": "capManBug1", "x": 950, "y": 720},
+        {"image": "capManBug1", "x": 1600, "y": 850},
+        {"image": "capManBug1", "x": 2000, "y": 720},
+        {"image": "capManBug1", "x": 3500, "y": 850},
+        {"image": "capManBug1", "x": 3000, "y": 100},
+        {"image": "capManBug1", "x": 2610, "y": 400}
+    ],
+    "hero": {"x": 51, "y": 772}
+}

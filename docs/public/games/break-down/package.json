@@ -1,0 +1,54 @@
+{
+  "_args": [
+    [
+      "git+https://git@github.com/capAcade/breakout-game.git",
+      "C:\\workspace\\codingnights\\gameLauncher"
+    ]
+  ],
+  "_from": "git+https://git@github.com/capAcade/breakout-game.git",
+  "_id": "break-down@git+https://git@github.com/capAcade/breakout-game.git#5ac15112e4ec62981bfb60fa3a78ce4d332a92e9",
+  "_inBundle": false,
+  "_integrity": "",
+  "_location": "/break-down",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "git",
+    "raw": "git+https://git@github.com/capAcade/breakout-game.git",
+    "rawSpec": "git+https://git@github.com/capAcade/breakout-game.git",
+    "saveSpec": "git+https://git@github.com/capAcade/breakout-game.git",
+    "fetchSpec": "https://git@github.com/capAcade/breakout-game.git",
+    "gitCommittish": null
+  },
+  "_requiredBy": [
+    "/"
+  ],
+  "_resolved": "git+https://git@github.com/capAcade/breakout-game.git#5ac15112e4ec62981bfb60fa3a78ce4d332a92e9",
+  "_spec": "git+https://git@github.com/capAcade/breakout-game.git",
+  "_where": "C:\\workspace\\codingnights\\gameLauncher",
+  "author": {
+    "name": "CapAcade"
+  },
+  "bugs": {
+    "url": "https://github.com/capAcade/breakout-game.git/issues"
+  },
+  "dependencies": {},
+  "description": "This is a html5 game",
+  "devDependencies": {},
+  "homepage": "https://github.com/capAcade/breakout-game.git#readme",
+  "keywords": [
+    "games",
+    "html5"
+  ],
+  "license": "UNLICENSED",
+  "main": "main.js",
+  "name": "break-down",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/capAcade/breakout-game.git"
+  },
+  "scripts": {
+    "start": "electron .",
+    "test": "npm test"
+  },
+  "version": "1.0.0"
+}
