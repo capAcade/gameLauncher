@@ -16,10 +16,24 @@
             <img data-path="games/capmancrashingbugs/index.html" height="350px" width="350px" src="gameAssets/covers/Cover-Capman.png" />
             <!-- <img data-path="games/capball/index.html" height="350px" width="350px" src="gameAssets/covers/Cover-Capman-Pinball.png" /> -->
             <img data-path="games/capmangalaxy/index.html" height="350px" width="350px" src="gameAssets/covers/Cover-Capman-Galaxy.png" />
+            <img data-path="games/keymapper/index.html" height="350px" width="350px" src="gameAssets/covers/Cover-settings.png" />
         </div>
     </div>
     <div id="coverflow-slider"></div>
    <script>
+        var keys = JSON.parse(localStorage.getItem("capManKeys"));
+        if(keys === null) {
+           keys = {
+                playerOne: {
+                    up: 87,
+                    down: 83,
+                    left: 65,
+                    right: 68,
+                    green: 85
+                }
+            }
+        }
+
        $(function() {
             $('#coverflow').coverflow({
                 active: 2,
@@ -38,11 +52,11 @@
             });
 
             const cntrl = {
-                left: 65,
-                right: 68,
-                up: 87,
-                down: 83,
-                fire: 85
+                left: keys.playerOne.left,
+                right: keys.playerOne.right,
+                up: keys.playerOne.up,
+                down: keys.playerOne.down,
+                fire: keys.playerOne.green
             }
 
             document.addEventListener("keydown",(evt) =>{

@@ -29,6 +29,7 @@
     "capball": "git+https://git@github.com/capAcade/capBall.git",
     "capmancrashingbugs": "git+https://git@github.com/capAcade/capManCrashingBugs.git",
     "capmangalaxy": "git+https://git@github.com/capAcade/capManGalaxy.git",
+    "@capacade/keymapper": "git+https://github.com/capAcade/keyMapper.git",
     "copy-dir": "^0.4.0",
     "express": "^4.17.1",
     "phaser-league": "git+https://git@github.com/capAcade/phaser-league.git",

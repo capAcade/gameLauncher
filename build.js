@@ -30,6 +30,10 @@ var games = [
       to: `./${distFolder}/public/games/break-down`
     },
     {
+      from: './node_modules/@capacade/keymapper/dist',
+      to: `./${distFolder}/public/games/keymapper`
+    },
+    {
       from: './node_modules/capball',
       to: `./${distFolder}/public/games/capball`
     }
