@@ -21,6 +21,14 @@
     </div>
     <div id="coverflow-slider"></div>
    <script>
+       
+       function GoInFullscreen(element) {
+
+            element.webkitRequestFullscreen();
+
+        }
+
+
         var keys = JSON.parse(localStorage.getItem("capManKeys"));
         if(keys === null) {
            keys = {
@@ -60,6 +68,7 @@
             }
 
             document.addEventListener("keydown",(evt) =>{
+                //GoInFullscreen(document.querySelector("body"));
                 switch(evt.keyCode) {
                     case cntrl.left:
                         $('#coverflow').coverflow('prev');
