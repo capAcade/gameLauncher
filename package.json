@@ -8,8 +8,8 @@
     "start": "run-script-os",
     "build": "node build",
     "buildToExe": "npm run build && node compileToExe",
-    "start:windows": "start http://localhost:3000 && npm run build && node dist/app",
-    "start:macos": "open http://localhost:3000 && npm run build && node dist/app",
+    "start:windows": "npm run build && node dist/app",
+    "start:macos": "npm run build && node dist/app",
     "start:default": "npm run build && node dist/app",
     "prestart-dev": "npm run build",
     "start-dev": "nodemon dist/app.js"
