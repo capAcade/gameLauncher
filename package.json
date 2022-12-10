@@ -31,7 +31,7 @@
     "capmangalaxy": "git+https://git@github.com/capAcade/capManGalaxy.git",
     "@capacade/keymapper": "git+https://github.com/capAcade/keyMapper.git",
     "copy-dir": "^0.4.0",
-    "express": "^4.17.1",
+    "express": "^4.17.3",
     "phaser-league": "git+https://git@github.com/capAcade/phaser-league.git",
     "run-script-os": "^1.0.7"
   },
